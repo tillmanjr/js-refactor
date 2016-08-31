@@ -231,7 +231,9 @@
   },
   "public": true,
   "dependencies": {
+    "escope": "^3.6.0",
     "esprima": "^2.7.1",
+    "estraverse": "^4.2.0",
     "jfp": "^2.7.0"
   }
 }
