@@ -2,6 +2,7 @@ var vscodeFactory = require('./modules/shared/vscodeFactory');
 
 var addExport = require('./modules/commands/add-export');
 var convertToMemberFunction = require('./modules/commands/convert-to-member-function');
+var toMemberAssignment = require('./modules/commands/to-member-assignment');
 var convertToNamedFunction = require('./modules/commands/convert-to-named-function');
 var extractVariable = require('./modules/commands/extract-variable');
 var shiftParamsLeft = require('./modules/commands/shift-params-left');
@@ -20,6 +21,10 @@ function activate(context) {
 	
 	context.subscriptions.push(vscode.commands.registerCommand('cmstead.jsRefactor.convertToNamedFunction', function () {
         convertToNamedFunction(vscode.window.activeTextEditor);
+	}));
+
+	context.subscriptions.push(vscode.commands.registerCommand('cmstead.jsRefactor.toMemberAssignment', function () {
+        toMemberAssignment(vscode.window.activeTextEditor);
 	}));
 	
 	context.subscriptions.push(vscode.commands.registerCommand('cmstead.jsRefactor.wrapInExecutedFunction', function () {

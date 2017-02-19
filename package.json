@@ -21,6 +21,7 @@
   ],
   "activationEvents": [
     "onCommand:cmstead.jsRefactor.convertToMemberFunction",
+    "onCommand:cmstead.jsRefactor.toMemberAssignment",
     "onCommand:cmstead.jsRefactor.convertToNamedFunction",
     "onCommand:cmstead.jsRefactor.exportFunction",
     "onCommand:cmstead.jsRefactor.extractVariable",
@@ -91,6 +92,11 @@
         "description": "Convert function from a named function to a prototype member function"
       },
       {
+        "command": "cmstead.jsRefactor.toMemberAssignment",
+        "title": "JS Refactorings: To Member Assignment",
+        "description": "Create member assignment or assigments from selection"
+      },
+      {
         "command": "cmstead.jsRefactor.convertToNamedFunction",
         "title": "JS Refactorings: Convert To Named Function",
         "description": "Convert function from an assigned anonymous function to a fully qualified named function"
@@ -150,6 +156,11 @@
       {
         "command": "cmstead.jsRefactor.convertToMemberFunction",
         "key": "ctrl+shift+j ctrl+shift+m",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "cmstead.jsRefactor.toMemberAssignment",
+        "key": "ctrl+shift+j ctrl+shift+a",
         "when": "editorHasSelection"
       },
       {

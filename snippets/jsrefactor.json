@@ -90,7 +90,6 @@
         ],
         "description": "Creates a conditional block in your code."
     },
-    
     "Console Log": {
         "prefix": "log",
         "body": [
