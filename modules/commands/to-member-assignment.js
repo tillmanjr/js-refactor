@@ -12,8 +12,9 @@ module.exports = function (vsEditor) {
     function applyRefactor() {
         var coords = utilities.buildCoords(vsEditor, 0);
 
-        selection[0] = refactoring.refactorToMemberAssignment(selection[0]);
-        editActions.applySetEdit(vsEditor, selection.join('\n'), coords);
+        // selection[0] = refactoring.refactorToMemberAssignment(selection[0]);
+        const result = refactoring.refactorToMemberAssignment(selection, 'const');
+        editActions.applySetEdit(vsEditor, result.join('\n'), coords);
     }
 
 
